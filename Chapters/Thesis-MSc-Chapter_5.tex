@@ -1,0 +1,45 @@
+% #############################################################################
+% This is Chapter 5
+% !TEX root = ../main.tex
+% #############################################################################
+% Change the Name of the Chapter i the following line
+\fancychapter{Conclusion}
+\cleardoublepage
+% The following line allows to ref this chapter
+\label{chap:conclusion}
+
+The main objective of the work developed in this master thesis is the analysis of the current state of the information available publicly regarding air quality, namely PM10 concentration data, in the city of Lisbon, and to experiment with different technologies which could improve it. This was done through the development of a prototype for a low-cost PM10 sensor node with the use of the NB-IoT technology, the creation of a live PM10 concentration visualization application, and the assessment of various spatial interpolation algorithms in the inference of PM10 concentration in the city of Lisbon, with the limited data points available of the CCDR-LVT air quality monitoring network.
+This work conclusions solidify knowledge on the application of every used technology, in the field of air quality monitoring, interpolation and visualization.
+
+% #############################################################################
+\section{Conclusion}
+
+The developed low-cost sensor was successfully deployed in AVL station for two weeks. Measures were taken and compared with the simultaneous reference AVL PM10 monitor. Results showed an error of 14.40 μg/m³ between the two, which is slightly above the smallest scale division of PM10 classification. Inconsistent linearity was observed during the whole period, through the calculated daily Pearson correlation coefficients. Finally, it was concluded that the sensor is not able to integrate current official monitoring networks, and further experiments should be made to better understand these low-cost sensors calibration adjustments.
+
+The spatial interpolation algorithms tested, with data constituting 5 years of Lisbon's monitoring network measurements, from 2013 to 2017, revealed that there is not an high distance correlation between the stations in the network, in terms of geographical location influence. These were used only with geographic coordinates, and pollution in Lisbon was considered low in the considered 5 years, with very sparse data points, specially accounting the present urban topology, which might constitute reasons for why IDW with \textit{p} = 0, was one of the best performing algorithms. Finally, the developed online visualization platform resulted in a web application which can provide PM10 data with finer resolution than other current available platforms, even though it only covers the city of Lisbon, and in an approach which can be used by further studies and platforms to represent geographical interpolation phenomenons online.
+
+As an overall conclusion to this work, the current state of the data available publicly regarding air quality was studied and assessed and several experiments were made in other to evaluate the application of new technologies, and the creation of prototypes, which could improve it. Relevant results were obtained regarding the usage and performance of every technology used and applied in this work. Finally, information was gathered for further study of the phenomenon of spatial interpolation of air quality, its measurement and its visualization.
+
+%Several other variables should be measured at the placement location, in order to conclude on how susceptible that low-cost sensor is to different environment conditions. However, the used board, SODAQ SFF R412M did not work appropriately with both PMS5003 and any of the available sensors tested (DHT11, DHT22 and BME280), simultaneously.
+
+
+\section{Future Work}
+
+% NB-IoT + Sensor
+In a study using NB-IoT, several tests and an evaluation of the study area coverage should be made previously to its application. These tests should be made in the field and with several different mobile operators and different NB-IoT chipsets, in order to deduce coverage constraints and hardware limitations.
+
+Low-cost PM monitoring sensors, should be studied beforehand in controlled environments. Various tests should be made with different conditions in order to evaluate the deviations between measures as an answer to real world conditions.
+
+Ideally, with a very well understanding of this sensor properties, and a calibration function which could minimize the error to extremely low values, for each specific placement location, this type of sensors could integrate air quality monitoring networks, but only to further increase their spatial density and the resolution at which air quality could be visualized. This would ultimately improve researchers understanding of air quality phenomenons, and propel research progress in related fields of study.
+
+%Spatial Interpolation Models
+Spatial algorithms tested in this work could be studied and complemented with air dispersion models. Data could be gathered for certain long periods of time for variables such as traffic, wind direction, temperature, altitude and relative humidity, and could be incorporated into machine learning algorithms.
+
+Regarding FBNs, its implementation could be parallelized, which could drastically optimize its performance, due to the parallel nature of its neuron sampling operations. It could be further studied regarding spatial geographical interpolation, with the integration of additional variables to the problem.
+
+% WEB VIS APP
+The web visualization tool developed in this work, as already pointed out in Section 4.3 of this work, could be used in the future as a visualization tool in different geographical fields. It could also be extended in order to include other air quality pollution gases and indicators.
+
+The developed prototype could also be extended into a web application, since it is constituted predominantly by web components, through the development of an adequate application programming interface, and the deployment with a mobile app development technology, such as Ionic, which allows the development of mobile applications using web technologies such as CSS and HTML. 
+
+% #############################################################################
